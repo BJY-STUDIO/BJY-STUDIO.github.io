@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## 这里是我的GitHub个人站点！
 
 You can use the [editor on GitHub](https://github.com/BJY-STUDIO/BJY-STUDIO.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
