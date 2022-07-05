@@ -1,8 +1,31 @@
-<html>
+    <!DOCTYPE html>
+<html lang="zh-Hans">
   <head>
-    <title>这是一个测试页面。</title>
+    <meta charset="utf-8">
+    <title>这是一个测试页面。使用 JavaScript 的示例</title>
+    <script>
+
+  document.addEventListener("DOMContentLoaded", function() {
+  function createParagraph() {
+    let para = document.createElement('p');
+    para.textContent = '你点击了这个按钮！';
+    document.body.appendChild(para);
+  }
+
+  const buttons = document.querySelectorAll('button');
+
+  for(let i = 0; i < buttons.length ; i++) {
+    buttons[i].addEventListener('click', createParagraph);
+  }
+});
+
+    </script>
   </head>
   <body>
     <iframe width="100%" style="min-width: 750px;min-height: 500px" src="https://www.acfun.cn/player/ac35367697" id="ACFlashPlayer-re" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+ 
+    <button>点我呀</button>
+
+    
   </body>
 </html>
