@@ -1,3 +1,4 @@
+/* 创建一个伪元素来实现全屏背景图片 */
 body::before {
     background-size: cover;
     background-attachment: fixed;
@@ -10,6 +11,8 @@ body::before {
     top: 0;
     position: fixed;
 }
+
+/* 根据不同的屏幕尺寸设置不同的背景图片 */
 @media (max-width: 512px)  and (-webkit-min-device-pixel-ratio: 1.5),
        (max-width: 512px)  and (min-resolution: 1.5dppx),
        (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
