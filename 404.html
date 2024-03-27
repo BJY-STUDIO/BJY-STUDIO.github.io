@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+</head>
+<body>
+<div style="text-align: center; margin-top: 20px;">
+    <h1>404 - Page Not Found</h1>
+    <p>Oops! The page you are looking for could not be found.</p>
+    <p>You will be redirected to the homepage in <span id="countdown">5</span> seconds.</p>
+</div>
+
+<script>
+    // 倒计时功能
+    var countdownElement = document.getElementById('countdown');
+    var countdown = 5; // 倒计时时间，单位：秒
+
+    // 每秒更新倒计时显示，直到倒计时结束
+    var countdownInterval = setInterval(function() {
+        countdown--;
+        countdownElement.textContent = countdown;
+        if (countdown <= 0) {
+            clearInterval(countdownInterval);
+            // 重定向到首页
+            window.location.href = 'index.html';
+        }
+    }, 1000);
+</script>
+</body>
+</html>
