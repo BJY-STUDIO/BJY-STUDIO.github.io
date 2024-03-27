@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Kernel 的个人博客 - Hello World! </title>
+    <title>Kernel 的个人博客 - 关于</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -75,15 +75,16 @@
 </script>
 <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
     <main class="mdl-layout__content">
-        <div class="demo-back">
-            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="../index.html" title="go back" role="button">
+        <div   id="backindex" class="demo-back">
+            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored" href="../index.html" title="go back" role="button">
                 <i class="material-icons" role="presentation">arrow_back</i>
             </a>
         </div>
+        <span class="mdl-tooltip" for="backindex">返回主页</span>
         <div class="demo-blog__posts mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
                 <div class="mdl-card__media mdl-color-text--grey-50">
-                    <h3>Hello World! </h3>
+                    <h3>关于</h3>
                 </div>
                 <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
                     <div class="minilogo"></div>
@@ -97,6 +98,7 @@
                         <i id="likeButton" class="material-icons" role="presentation">favorite</i>
                         <span class="visuallyhidden">favorites</span>
                     </div>
+                    <div class="mdl-tooltip" data-mdl-for="likeButton">点赞</div>
 
                     <div>
                         <i class="material-icons" role="presentation">bookmark</i>

@@ -4,19 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        /* 导入 Roboto Mono 字体 */
+        @font-face {
+            font-family: 'Roboto Mono';
+            src: url('https://fonts.gstatic.com/s/robotomono/v23/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0me8iUI0.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .page-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 将容器的高度设置为视窗的高度，使其垂直居中 */
+            text-align: center;
+        }
+
+        .page-content h1 {
+            font-family: 'Roboto Mono', monospace; /* 设置 Roboto Mono 字体 */
+            font-size: 2.5em; /* 使用 em 单位，相对于父元素字体大小 */
+            margin-top: 30px; /* 设置上边距 */
+        }
+
+        .page-content p {
+            font-family: 'Google Sans', sans-serif; /* 设置 Google Sans 字体 */
+            font-size: 1.6em; /* 使用 em 单位，相对于父元素字体大小 */
+            margin: 15px 0; /* 设置上下边距为 10px，左右边距为 0 */
+        }
+
+        #countdown {
+            color: red; /* 设置倒计时文字颜色为红色 */
+        }
+
+    </style>
+    <title>页面丢失</title>
 </head>
 <body>
-<div style="text-align: center; margin-top: 20px;">
-    <h1>404 - Page Not Found</h1>
-    <p>Oops! The page you are looking for could not be found.</p>
-    <p>You will be redirected to the homepage in <span id="countdown">5</span> seconds.</p>
-</div>
 
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Kernel 的个人博客</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="./index.html">首页</a>
+                <a class="mdl-navigation__link" href="./index.html">关于</a>
+                <a class="mdl-navigation__link" href="./index.html">文章</a>
+                <a class="mdl-navigation__link" href="./index.html">收藏</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="./index.html">首页</a>
+            <a class="mdl-navigation__link" href="./index.html">关于</a>
+            <a class="mdl-navigation__link" href="./index.html">文章</a>
+            <a class="mdl-navigation__link" href="./index.html">收藏</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <!-- Your content goes here -->
+            <div>
+                <h1>404 - Page Not Found</h1>
+                <p>页面不存在，让我们帮你重回正轨</p>
+                <p>Oops! The page you are looking for could not be found.</p>
+                <p>You will be redirected to the homepage in <span id="countdown">15</span> seconds.</p>
+            </div>
+
+        </div>
+    </main>
+</div>
 <script>
     // 倒计时功能
     var countdownElement = document.getElementById('countdown');
-    var countdown = 5; // 倒计时时间，单位：秒
+    var countdown = 15; // 倒计时时间，单位：秒
 
     // 每秒更新倒计时显示，直到倒计时结束
     var countdownInterval = setInterval(function() {

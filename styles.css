@@ -207,6 +207,16 @@ body .demo-blog {
   -webkit-transform: translate(0px, -28px);
           transform: translate(0px, -28px);
 }
+
+.demo-blog .something-else > a {
+    position: absolute;
+    top: 0;
+    right: 28px;
+    -webkit-transform: translate(0px, -28px);
+    transform: translate(0px, -28px);
+}
+
+
 .demo-blog .something-else .mdl-card__media {
   font-size: 13px;
   font-weight: 500;
