@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -31,24 +31,29 @@
           rel="stylesheet">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
     <link rel="stylesheet" href="styles.css">
-
 </head>
+
 <body>
-<div class="demo-blog mdl-layout ">
-    <main class="mdl-layout__content">
-        <div class="demo-blog__posts mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-                <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-                        <h4>选择Material Design Lite</h4>
-                        <p>
-                        在选择搭建个人博客的框架时，我花了一些时间研究了不同的选项。我想要一个现代化的设计，同时也要确保我的博客在不同设备上都有良好的响应性。在这个过程中，我发现了Material Design Lite框架。这个框架基于Google的Material Design原则，具有简洁、清晰的设计风格，而且易于使用。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<div class="meta__favorites">
+    <button id="likeButton">点赞</button>
+    <span id="likeCount">0</span>
+    <span class="visuallyhidden">favorites</span>
 </div>
+
+<script>
+    // 获取按钮和显示点赞数的元素
+    var likeButton = document.getElementById('likeButton');
+    var likeCount = document.getElementById('likeCount');
+
+    // 初始化点赞数
+    var count = 0;
+
+    // 添加点击事件监听器
+    likeButton.addEventListener('click', function() {
+        // 每次点击时更新点赞数并更新显示的数值
+        count++;
+        likeCount.textContent = count;
+    });
+</script>
 </body>
 </html>

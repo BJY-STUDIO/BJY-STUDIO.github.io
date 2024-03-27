@@ -47,6 +47,9 @@
       rel="stylesheet">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
     <link rel="stylesheet" href="styles.css">
+
+
+
     <style>
     #view-source {
       position: fixed;
@@ -60,6 +63,16 @@
     </style>
   </head>
   <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var likeCount = 0;
+    $(document).ready(function(){
+      $('.material-icons').click(function(){
+        likeCount++;
+        $('#likeCount').text(likeCount);
+      });
+    });
+  </script>
     <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-back">
@@ -76,13 +89,15 @@
               <div class="minilogo"></div>
               <div>
                 <strong>The Kernel</strong>
-                <span>2023年3月26日</span>
+                <span>2024年3月26日</span>
               </div>
               <div class="section-spacer"></div>
               <div class="meta__favorites">
-                 <i class="material-icons" role="presentation">favorite</i>
+                <span id="likeCount">0</span>
+                <i id="likeButton" class="material-icons" role="presentation">favorite</i>
                 <span class="visuallyhidden">favorites</span>
               </div>
+
               <div>
                 <i class="material-icons" role="presentation">bookmark</i>
                 <span class="visuallyhidden">bookmark</span>

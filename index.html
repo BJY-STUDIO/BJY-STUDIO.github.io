@@ -58,6 +58,24 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+    /* 让链接填充整个菜单项 */
+    .mdl-menu__item a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none; /* 如果需要取消下划线 */
+    }
+
+    /* 鼠标悬停时，为链接添加样式 */
+    .mdl-menu__item a:hover {
+      background-color: #f0f0f0; /* 根据需要修改颜色 */
+    }
+
+    /* 禁用链接时的样式 */
+    .mdl-menu__item a[disabled] {
+      color: #aaa; /* 根据需要修改颜色 */
+      pointer-events: none; /* 禁用鼠标事件 */
+    }
     </style>
   </head>
   <body>
@@ -72,7 +90,7 @@
               <div class="minilogo"></div>
               <div>
                 <strong>The Kernel</strong>
-                <span>2023年3月26日</span>
+                <span>2024年3月26日</span>
               </div>
             </div>
           </div>
@@ -90,7 +108,7 @@
                 <strong>The Kernel</strong>
               </div>
               <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menubtn">
-                <li class="mdl-menu__item">关于</li>
+                <li><a href="./file/about.html" class="mdl-menu__item">关于</a></li>
                 <li class="mdl-menu__item">私信</li>
                 <li class="mdl-menu__item">收藏</li>
                 <li class="mdl-menu__item">搜索</li>
@@ -112,7 +130,7 @@
               <div class="minilogo"></div>
               <div>
                 <strong>The Kernel</strong>
-                <span>2023年3月26日</span>
+                <span>2024年3月26日</span>
               </div>
             </div>
           </div>
@@ -127,7 +145,7 @@
               <div class="minilogo"></div>
               <div>
                 <strong>The Kernel</strong>
-                <span>2023年3月26日</span>
+                <span>2024年3月26日</span>
               </div>
             </div>
           </div>
@@ -142,7 +160,7 @@
               <div class="minilogo"></div>
               <div>
                 <strong>The Kernel</strong>
-                <span>2023年3月26日</span>
+                <span>2024年3月26日</span>
               </div>
             </div>
           </div>
