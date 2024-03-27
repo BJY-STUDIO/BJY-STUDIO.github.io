@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Clocks - CSS Animation</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/clocks.css" />
+</head>
+<body class="">
+<section class="post-header">
+    <section class="demo">
+        <div class="post-header-container clocks single local bounce">
+            <article class="clock ios7">
+                    <span class="extrude1">
+                        <section class="hours-container">
+                            <section class="hours angled"></section>
+                        </section>
+                    </span>
+                <span class="extrude2">
+                        <section class="minutes-container">
+                            <section class="minutes angled"></section>
+                        </section>
+                    </span>
+                <span class="extrude3">
+                        <section class="seconds-container">
+                            <section class="seconds"></section>
+                        </section>
+                    </span>
+            </article>
+        </div>
+    </section>
+</section>
+
+<section class="container page-content">
+    <section class="row">
+        <article class="post-content nine columns ">
+
+
+            
+            <div class="demo-container clocks single local bounce">
+                <article class="clock simple show">
+                    <div class="hours-container">
+                        <div class="hours angled" style="transform: rotateZ(687.5deg);"></div>
+                    </div>
+                    <div class="minutes-container" data-second-angle="108">
+                        <div class="minutes angled" style="transform: rotateZ(330deg);"></div>
+                    </div>
+                    <div class="seconds-container" style="transition-delay: 0.024s; transform: rotateZ(102deg);">
+                        <div class="seconds" style="transform: rotateZ(108deg);"></div>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="demo-container clocks multiple active bounce">
+                <article class="clock station js-new-york">
+                    <div class="label">New York</div>
+                    <div class="hours-container">
+                        <div class="hours"></div>
+                    </div>
+                    <div class="minutes-container">
+                        <div class="minutes"></div>
+                    </div>
+                    <div class="seconds-container">
+                        <div class="seconds"></div>
+                    </div>
+                </article>
+                <article class="clock station js-london">
+                    <div class="label">London</div>
+                    <div class="hours-container">
+                        <div class="hours"></div>
+                    </div>
+                    <div class="minutes-container">
+                        <div class="minutes"></div>
+                    </div>
+                    <div class="seconds-container">
+                        <div class="seconds"></div>
+                    </div>
+                </article>
+                <article class="clock station js-beijing">
+                    <div class="label">Beijing</div>
+                    <div class="hours-container">
+                        <div class="hours"></div>
+                    </div>
+                    <div class="minutes-container">
+                        <div class="minutes"></div>
+                    </div>
+                    <div class="seconds-container">
+                        <div class="seconds"></div>
+                    </div>
+                </article>
+            </div>
+        </article>
+    </section>
+</section>
+
+
+<script src="./javascript/moment.min.js"></script>
+<script src="./javascript/moment-timezone-with-data-2010-2020.min.js"></script>
+<script src="./javascript/clocks.js"></script>
+</body>
+</html>
