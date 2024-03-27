@@ -21,17 +21,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Kernel 的个人博客 - 关于</title>
+    <title>Kernel 的个人博客 - Hello World! </title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <link rel="icon" sizes="192x192" href="../images/touch/chrome-touch-icon-192x192.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../apple-touch-icon-precomposed.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
@@ -47,6 +47,9 @@
           rel="stylesheet">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
     <link rel="stylesheet" href="../styles.css">
+
+
+
     <style>
         #view-source {
             position: fixed;
@@ -60,23 +63,33 @@
     </style>
 </head>
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var likeCount = 0;
+    $(document).ready(function(){
+        $('.material-icons').click(function(){
+            likeCount++;
+            $('#likeCount').text(likeCount);
+        });
+    });
+</script>
 <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
     <main class="mdl-layout__content">
         <div class="demo-back">
-            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="../index.html" title="go back" role="button">
+            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html" title="go back" role="button">
                 <i class="material-icons" role="presentation">arrow_back</i>
             </a>
         </div>
         <div class="demo-blog__posts mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
                 <div class="mdl-card__media mdl-color-text--grey-50">
-                    <h3>关于 </h3>
+                    <h3>Hello World! </h3>
                 </div>
                 <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
                     <div class="minilogo"></div>
                     <div>
                         <strong>The Kernel</strong>
-                        <span>2024年3月27日</span>
+                        <span>2024年3月26日</span>
                     </div>
                     <div class="section-spacer"></div>
                     <div class="meta__favorites">
@@ -84,6 +97,7 @@
                         <i id="likeButton" class="material-icons" role="presentation">favorite</i>
                         <span class="visuallyhidden">favorites</span>
                     </div>
+
                     <div>
                         <i class="material-icons" role="presentation">bookmark</i>
                         <span class="visuallyhidden">bookmark</span>
@@ -94,42 +108,32 @@
                     </div>
                 </div>
                 <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-                    <p>
-                        今天，我很高兴地宣布，我成功搭建了我的第一个个人博客，并且使用了Material Design Lite（MDL）框架来构建它。作为一个热衷于技术和设计的人，这对我来说是一个里程碑式的成就。在这篇博客中，我想分享一下我的经验，以及为什么我选择了MDL框架以及它给我带来的好处。
-                    </p>
-                    <h4 class="mdl-typography--text-left">选择 Material Design Lite</h4>
-                    <p>
-                        在选择搭建个人博客的框架时，我花了一些时间研究了不同的选项。我想要一个现代化的设计，同时也要确保我的博客在不同设备上都有良好的响应性。在这个过程中，我发现了Material Design Lite框架。这个框架基于Google的Material Design原则，具有简洁、清晰的设计风格，而且易于使用。
-                    </p>
-                    <h4 class="left-align-h4">MDL框架的优势</h4>
-                    <p>MDL 框架具有许多优势，这些优势使它成为我的首选：</p>
+                    <h4>关于本博客</h4>
+                    <p>本博客是一个基于 Material Design Lite 模板构建的网站，旨在提供技术相关的内容分享和交流平台。</p>
+                    <h4>版权声明</h4>
+                    <p>本博客的所有内容，包括但不限于文章、图片和其他资源，均受到 Apache-2.0 许可证的保护。</p>
+                    <h4>Apache-2.0 许可证简介</h4>
                     <ol>
                         <li>
                             <p>
-                                <strong>现代化设计</strong>：MDL框架提供了一套现代化的UI组件，包括按钮、卡片、导航栏等，使得我的博客看起来非常时尚和专业。</p>
+                                <strong>保留版权声明：</strong> 在使用、修改或分发本博客的内容时，你需要保留原始的版权声明和许可证信息。</p>
                         </li>
                         <li>
                             <p>
-                                <strong>响应式布局</strong>：使用MDL框架，我可以轻松地创建响应式布局，确保我的博客在各种设备上都有良好的显示效果，无论是桌面、平板还是手机。</p>
+                                <strong>提供许可证：</strong> 如果你对本博客进行了修改或衍生作品，你需要在相应的地方提供Apache-2.0许可证的副本，并清晰地说明对哪些部分进行了修改。</p>
                         </li>
                         <li>
-                            <p>
-                                <strong>易于定制</strong>：虽然MDL框架提供了许多默认的UI组件和样式，但我也可以根据自己的需求进行定制，以满足我的个性化需求。</p>
-                        </li>
-                        <li>
-                            <p>
-                                <strong>文档丰富</strong>：MDL框架有着清晰而详细的文档，对于初学者来说非常友好。我可以轻松地查阅文档，找到我需要的信息和解决方案。</p>
+                            <p><strong>无担保条款：</strong> 本博客以及相关内容均按原样提供，不提供任何形式的担保，包括但不限于适销性、特定用途适用性和非侵权性。作者不对任何直接、间接、偶然、特殊、惩罚性或后续损害承担责任。
+
+                            </p>
                         </li>
                     </ol>
-                    <h4 class="mdl-typography--text-left">我的博客体验</h4>
-                    <p>搭建我的博客过程非常顺利。我使用了MDL框架提供的各种组件和样式，同时根据我的喜好进行了一些定制。结果是一个漂亮而功能丰富的个人博客，我非常满意。</p>
-                    <p>通过我的博客，我可以分享我的想法、经验和知识，与其他人建立联系。我相信，这将是我个人成长和技术探索的一个重要平台。</p>
-                    <h4 class="mdl-typography--text-left">结语</h4>
-                    <p>搭建我的第一个个人博客并不容易，但是通过选择Material Design Lite框架，我能够轻松地创建出一个现代化、响应式的博客。我很高兴我做出了这个选择，我期待着在我的博客上与大家分享更多内容。</p>
-                    <P>如果你也想搭建自己的个人博客，我强烈推荐你考虑使用Material Design Lite框架。它简单易用，同时提供了丰富的功能和定制选项，可以帮助你打造出一个与众不同的博客。</P>
-                    <p>谢谢你阅读我的博客！如果你有任何问题或意见，请随时在评论区留言，我会尽快回复。</p>
-                </div>
+                    <h4>免责声明</h4>
+                    <p>本博客的内容仅供参考和个人学习使用，不构成任何形式的法律、商业或专业建议。作者对本博客内容的准确性和完整性不作任何承诺或保证。</p>
+                    <p></p>
+                    <p></p>
 
+                </div>
             </div>
 
             <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
@@ -171,20 +175,5 @@
     <div class="mdl-layout__obfuscator"></div>
 </div>
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<script>
-    // 获取按钮和显示点赞数的元素
-    var likeButton = document.getElementById('likeButton');
-    var likeCount = document.getElementById('likeCount');
-
-    // 初始化点赞数
-    var count = 0;
-
-    // 添加点击事件监听器
-    likeButton.addEventListener('click', function() {
-        // 每次点击时更新点赞数并更新显示的数值
-        count++;
-        likeCount.textContent = count;
-    });
-</script>
 </body>
 </html>
