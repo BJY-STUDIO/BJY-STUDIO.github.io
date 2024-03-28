@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Area</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .code-area {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .code-title {
+            background-color: #555;
+            color: #fff;
+            padding: 1px; /* 标题区域的上下边距设置为5px */
+            font-size: 14px;
+            line-height: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .code-title .code-type {
+            background-color: #555;
+            color: #fff;
+            padding: 1px 1px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .code-title .copy-button {
+            padding: 1px 1px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .code-content {
+            background-color: #333;
+            color: #fff;
+            padding: 1px; /* 代码区域的上下边距设置为10px */
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            height: auto;
+            max-height: 200px; /* 最大高度可根据需要调整 */
+            overflow-y: auto;
+            margin: 0; /* 左右边距设置为0 */
+        }
+    </style>
+</head>
+<body>
+
+<!-- 代码区域 -->
+<div class="code-area">
+    <!-- 标题区域 -->
+    <div class="code-title" style="padding: 1px 1px;"> <!-- 标题区域的上下边距设置 -->
+        <span class="code-type">HTML</span> <!-- 代码类型 -->
+        <button class="copy-button" onclick="copyCode(this)">
+            <i class="material-icons">content_copy</i> <!-- 复制按钮 -->
+        </button>
+    </div>
+    <!-- 代码内容 -->
+    <div class="code-content">
+        <!-- 这里是您的代码 -->
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </div>
+</div>
+
+<!-- 复制代码到剪贴板的 JavaScript 函数 -->
+<script>
+    function copyCode(button) {
+        var codeContent = button.parentElement.nextElementSibling.textContent.trim();
+        var tempTextarea = document.createElement('textarea');
+        tempTextarea.value = codeContent;
+        tempTextarea.setAttribute('readonly', '');
+        tempTextarea.style.position = 'absolute';
+        tempTextarea.style.left = '-9999px';
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextarea);
+        button.innerHTML = '<i class="material-icons">done</i>'; // 将按钮图标更改为“已复制”图标
+        button.disabled = true;
+    }
+</script>
+
+</body>
+</html>
