@@ -77,10 +77,106 @@
       pointer-events: none; /* 禁用鼠标事件 */
     }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 找到菜单按钮元素
+        var menuButton = document.getElementById('menu-button');
+        // 找到主题菜单项元素
+        var menuTheme1 = document.getElementById('menu-theme-1');
+        var menuTheme2 = document.getElementById('menu-theme-2');
+        // 定义 menuTheme3
+        var menuTheme3 = document.getElementById('menu-theme-3');
+
+        // 添加点击事件处理程序
+        menuTheme1.addEventListener('click', function() {
+          // 设置新的主题配色（主题1）
+          setThemeColor('https://code.getmdl.io/1.3.0/material.grey-orange.min.css');
+        });
+
+        menuTheme2.addEventListener('click', function() {
+          // 设置新的主题配色（主题2）
+          setThemeColor('https://code.getmdl.io/1.3.0/material.blue_grey-red.min.css');
+        });
+
+        // 添加点击事件处理程序
+        menuTheme3.addEventListener('click', function() {
+          // 设置新的主题配色（主题3）
+          setThemeColor('https://code.getmdl.io/1.3.0/material.teal-green.min.css');
+        });
+      });
+
+      // 函数：设置主题配色
+      function setThemeColor(themeUrl) {
+        // 找到现有的主题样式表链接
+        var themeLink = document.querySelector('link[href^="https://code.getmdl.io/1.3.0/material."]');
+
+        // 如果找到了主题样式表链接
+        if (themeLink) {
+          // 更新主题样式表链接的 href 属性为新的主题 URL
+          themeLink.href = themeUrl;
+        }
+      }
+    </script>
+
   </head>
   <body>
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
+        <!-- 在按钮外面包裹一个父元素，用于定位 -->
+        <div class="theme">
+          <!-- 将按钮修改为一个按钮图标 -->
+          <button id="menu-button" class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons" role="presentation">palette</i>
+          </button>
+          <!-- 菜单栏结构 -->
+          <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="menu-button">
+            <li id="menu-theme-1" class="mdl-menu__item">Grey - Orange</li>
+            <li id="menu-theme-2" class="mdl-menu__item">Blue Grey - Red</li>
+            <li id="menu-theme-3" class="mdl-menu__item">Teal - Green</li>
+          </ul>
+          <div class="mdl-tooltip" for="menu-button">
+            更改主题配色
+          </div>
+        </div>
+        <!-- Snackbar 容器 -->
+        <div id="theme-snackbar-container" class="mdl-js-snackbar mdl-snackbar">
+          <div class="mdl-snackbar__text"></div>
+          <button class="mdl-snackbar__action" type="button"></button>
+        </div>
+
+        <script>
+          (function() {
+            'use strict';
+            // 获取 Snackbar 容器和菜单项
+            var snackbarContainer = document.querySelector('#theme-snackbar-container');
+            var menuItems = document.querySelectorAll('.mdl-menu__item');
+
+            // Snackbar 撤消操作的处理函数
+            //function handler() {
+              // 这里可以添加处理撤消操作的代码，比如撤销主题更改
+             // console.log('撤销操作已触发。');
+            //}
+
+            // 点击菜单项触发 Snackbar
+            menuItems.forEach(function(menuItem) {
+              menuItem.addEventListener('click', function() {
+                // 获取点击的菜单项文本
+                var theme = this.innerText;
+
+                // Snackbar 数据
+                var data = {
+                  message: '选择了 ' + theme + ' 主题',
+                  timeout: 2000,
+                  //actionHandler: handler, // 使用 handler 函数处理撤消操作
+                  //actionText: '撤销'
+                };
+
+                // 显示 Snackbar
+                snackbarContainer.MaterialSnackbar.showSnackbar(data);
+              });
+            });
+          })();
+        </script>
         <div class="demo-blog__posts mdl-grid">
           <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
             <div class="mdl-card__media mdl-color-text--grey-50">
