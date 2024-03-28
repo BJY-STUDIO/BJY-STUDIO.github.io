@@ -1,0 +1,187 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Kernel 的个人博客 - Code </title>
+
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
+    <!-- Page styles -->
+    <link rel="stylesheet" href="./css/prism-default.css">
+    <link rel="stylesheet" href="./css/material.min.css">
+    <link rel="stylesheet" href="./css/mdl-main.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+    </style>
+</head>
+<body class="started">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var likeCount = 0;
+    $(document).ready(function(){
+        $('.material-icons').click(function(){
+            likeCount++;
+            $('#likeCount').text(likeCount);
+        });
+    });
+</script>
+<div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+    <main class="mdl-layout__content">
+        <div   id="backindex" class="demo-back">
+            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored" href="../index.html" title="go back" role="button">
+                <i class="material-icons" role="presentation">arrow_back</i>
+            </a>
+        </div>
+        <span class="mdl-tooltip" for="backindex">返回主页</span>
+        <div class="demo-blog__posts mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+                <div class="mdl-card__media mdl-card__code mdl-color-text--grey-50">
+                    <h3>Code</h3>
+                </div>
+                <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                    <div class="minilogo"></div>
+                    <div>
+                        <strong>The Kernel</strong>
+                        <span>2024年3月28日</span>
+                    </div>
+                    <div class="section-spacer"></div>
+                    <div class="meta__favorites">
+                        <span id="likeCount">0</span>
+                        <i id="likeButton" class="material-icons" role="presentation">favorite</i>
+                        <span class="visuallyhidden">favorites</span>
+                    </div>
+                    <div class="mdl-tooltip" data-mdl-for="likeButton">点赞</div>
+
+                    <div>
+                        <i class="material-icons" role="presentation">bookmark</i>
+                        <span class="visuallyhidden">bookmark</span>
+                    </div>
+                    <div>
+                        <i class="material-icons" role="presentation">share</i>
+                        <span class="visuallyhidden">share</span>
+                    </div>
+                </div>
+                <div class="mdl-color-text--grey-700 mdl-card__supporting-text docs-layout">
+                    <h4>代码样式</h4>
+
+                    <div class="code-with-text">
+                        Just add the following <code>&lt;link&gt;</code> and <code>&lt;script&gt;</code> elements into your HTML pages (27kB gzipped):
+                        <pre class="language-markup"><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;
+&lt;link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"&gt;
+&lt;script defer src="https://code.getmdl.io/1.3.0/material.min.js"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+
+                    <p></p>
+
+                    <div class="snippet-group">
+
+                        <div class="snippet-code">
+                                    <pre class="language-markup codepen-button-enabled"><code id="button/raised-ripple-accent.html">&lt;!-- Accent-colored raised button with ripple --&gt;
+&lt;button class=&quot;mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent&quot;&gt;
+  Button
+&lt;/button&gt;
+</code><div class="codepen-extra-css">&lt;style&gt;&lt;/style&gt;</div><code id="button/fab-colored.html">&lt;!-- Colored FAB button --&gt;
+&lt;button class=&quot;mdl-button mdl-js-button mdl-button--fab mdl-button--colored&quot;&gt;
+  &lt;i class=&quot;material-icons&quot;&gt;add&lt;/i&gt;
+&lt;/button&gt;
+</code><div class="codepen-extra-css">&lt;style&gt;&lt;/style&gt;</div><div class="codepen-extra-css">&lt;style&gt;
+body {
+  padding: 20px;
+  background: #fafafa;
+  position: relative;
+}
+&lt;/style&gt;</div><form class="codepen-button" action="https://codepen.io/pen/define" method="POST" target="_blank"></form></pre>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+                    <div class="comment mdl-color-text--grey-700"></div>
+                </div>
+            </div>
+
+            <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+                <a href="index.html" class="demo-nav__button">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                        <i class="material-icons">arrow_back</i>
+                    </button>
+                    Newer
+                </a>
+                <div class="section-spacer"></div>
+                <a href="index.html" class="demo-nav__button">
+                    Older
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
+                </a>
+            </nav>
+        </div>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+                <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                    <span class="visuallyhidden">Twitter</span>
+                </button>
+                <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+                    <span class="visuallyhidden">Facebook</span>
+                </button>
+                <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                    <span class="visuallyhidden">Google Plus</span>
+                </button>
+            </div>
+            <div class="mdl-mini-footer--right-section">
+                <button class="mdl-mini-footer--social-btn social-btn__share">
+                    <i class="material-icons" role="presentation">share</i>
+                    <span class="visuallyhidden">share</span>
+                </button>
+            </div>
+        </footer>
+    </main>
+    <div class="mdl-layout__obfuscator"></div>
+</div>
+<script src="./javascript/snippets.js"></script>
+<!-- Add Copy-to-CodePen buttons to code blocks -->
+<script src="./javascript/codepen.js"></script>
+<!-- Enable Prism syntax highlighting -->
+<script src="./javascript/prism.js"></script>
+<script src="./javascript/prism-markup.min.js"></script>
+<script src="./javascript/prism-javascript.min.js"></script>
+<script src="./javascript/prism-css.min.js"></script>
+<script src="./javascript/prism-bash.min.js"></script>
+<script src="./javascript/main.js"></script>
+<!-- Built with love using Material Design Lite -->
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+</html>

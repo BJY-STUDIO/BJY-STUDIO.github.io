@@ -299,6 +299,20 @@ body .demo-blog {
   background-image: url('images/road.jpg');
   height: 280px;
 }
+
+
+/*自定义*/
+.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__code {
+    background-image: url('images/chroma_red.jpg');
+    height: 280px;
+}
+
+
+
+
+
+
+
 .demo-blog--blogpost .comments {
   background-color: #EEE;
 }
