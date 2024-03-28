@@ -45,7 +45,9 @@
 
         #countdown {
             color: red; /* 设置倒计时文字颜色为红色 */
+            font-weight: bold;
         }
+
 
     </style>
     <title>页面丢失</title>
@@ -64,8 +66,8 @@
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="https://bjy-studio.github.io/index.html">首页</a>
                 <a class="mdl-navigation__link" href="https://bjy-studio.github.io/file/about.html">关于</a>
-                <a class="mdl-navigation__link" href="https://bjy-studio.github.io/index.html">文章</a>
-                <a class="mdl-navigation__link" href="https://bjy-studio.github.io/index.html">收藏</a>
+                <a class="mdl-navigation__link" href="https://bjy-studio.github.io/entry.html">文章</a>
+                <a class="mdl-navigation__link" href="https://bjy-studio.github.io/file/code.html">示例</a>
             </nav>
         </div>
     </header>
@@ -81,23 +83,10 @@
     <main class="mdl-layout__content">
         <div class="page-content">
             <!-- Your content goes here -->
-            <div class="demo-container clocks single local bounce">
-                <article class="clock simple show">
-                    <div class="hours-container">
-                        <div class="hours angled" style="transform: rotateZ(687.5deg);"></div>
-                    </div>
-                    <div class="minutes-container" data-second-angle="108">
-                        <div class="minutes angled" style="transform: rotateZ(330deg);"></div>
-                    </div>
-                    <div class="seconds-container" style="transition-delay: 0.024s; transform: rotateZ(102deg);">
-                        <div class="seconds" style="transform: rotateZ(108deg);"></div>
-                    </div>
-                </article>
-            </div>
-            <div class="separator"></div>
+
             <div>
                 <h1>404 - Page Not Found</h1>
-                <p>页面不存在，让我们帮你重回正轨</p>
+                <p class="error-message">页面不存在，让我们帮你重回正轨</p>
                 <p>Oops! The page you are looking for could not be found.</p>
                 <p>You will be redirected to the homepage in <span id="countdown">15</span> seconds.</p>
             </div>
