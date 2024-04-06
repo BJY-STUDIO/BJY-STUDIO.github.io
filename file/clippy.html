@@ -1,0 +1,427 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>ClippyJS - Add Clippy or his friends to any website for instant nostalgia</title>
+    <link rel="stylesheet" type="text/css" href="./css/clippyjs.css" media="all">
+</head>
+<body>
+<div class="window-wrapper">
+    <div class="window">
+        <div class="window-border">
+            <div class="title-bar  h-count">
+                <div class="control-box">
+                    <a class="button-3d minimize"><span>&nbsp;</span></a>
+                    <a class="button-3d maximize"><span>&nbsp;</span></a>
+                    <a class="button-3d close"><span>&nbsp;</span></a>
+                </div>
+                <span class="title">
+                ClippyJS - Microsoft Word
+            </span>
+            </div>
+
+            <div class="menu-bar  h-count">
+                <a><span>F</span>ile</a>
+                <a><span>E</span>dit</a>
+                <a><span>V</span>iew</a>
+                <a><span>I</span>nsert</a>
+                <a>F<span>o</span>rmat</a>
+                <a><span>T</span>ools</a>
+                <a>T<span>a</span>ble</a>
+                <a><span>W</span>indow</a>
+                <a><span>H</span>elp</a>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="toolbar float-left">
+                <a class="b-new"></a>
+                <a class="b-open"></a>
+                <a class="b-save"></a>
+                <span class="sep"></span>
+
+                <a class="b-print"></a>
+                <a class="b-spell"></a>
+                <span class="sep"></span>
+
+                <a class="b-copy"></a>
+                <a class="b-paste"></a>
+                <span class="sep"></span>
+
+                <a class="b-undo" data-cmd="undo"></a>
+                <a class="b-redo" data-cmd="redo"></a>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="toolbar  float-left">
+                <a class="b-style"></a>
+
+                <div class="picker"><span class="arrow"></span>Normal</div>
+                <div class="picker"><span class="arrow"></span>Times New Roman</div>
+                <div class="picker"><span class="arrow"></span>12</div>
+
+                <span class="sep"></span>
+
+                <a class="b-bold" data-cmd="bold"></a>
+                <a class="b-italic" data-cmd="italic"></a>
+                <a class="b-underline" data-cmd="underline"></a>
+                <span class="sep"></span>
+
+                <a class="b-left" data-cmd="justifyLeft"></a>
+                <a class="b-center" data-cmd="justifyCenter"></a>
+                <a class="b-right" data-cmd="justifyRight"></a>
+
+                <div class="clear"></div>
+            </div>
+            <div class="toolbar float-right social h-count">
+                <a class="b-share text" href="https://bjy-studio.github.io" target="_blank"><span>Share</span><em id="fb-count"></em></a>
+                <a class="b-tweet text" href="https://bjy-studio.github.io" target="_blank"><span>Tweet</span><em id="tweet-count"></em></a>
+                <a class="b-fork text" href="https://bjy-studio.github.io" target="_blank"><span>Fork</span></a>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="content">
+                <div class="content-box">
+                    <div class="top-ruler  h-count">
+                        <div class="ruler"></div>
+                    </div>
+                    <div class="left-ruler"></div>
+                    <div class="document-scroller">
+
+                        <div class="document-content">
+                            <div class="document container">
+                                <a class="smore-guys" href="https://web.archive.org/web/20120712070735/http://www.smore.com/?ref=smore-letterhead"></a>
+                                <div class="document-wrap" contenteditable="true">
+                                    <div class="element element-title twelve columns alpha">
+                                        <h1>Clippy.js</h1>
+
+                                        <h2>
+                                            Add Clippy or his friends to any website for instant nostalgia.
+                                            Our research shows that people love two things: failed Microsoft technologies and
+                                            obscure Javascript libraries. Naturally, we decided to combine the two.
+                                        </h2>
+                                    </div>
+
+
+                                    <div class="element element-header twelve columns alpha">
+                                        <h3>Demonstration</h3>
+                                    </div>
+
+                                    <div class="element element-text twelve columns alpha">
+                                        <p>
+                                            Clippy.js is a full Javascript implementation of Microsoft Agent
+                                            (AKA Clippy and friends), ready to be embedded in any website. Pick an assistant
+                                            below and mash some animation buttons! Our favorite is Links the cat.
+                                        </p>
+                                    </div>
+
+                                    <div class="element element-demo ten columns alpha offset-by-one" contenteditable="false">
+                                        <div class="wrapper">
+                                            <div class="characters">
+                                                <a class="clippit active loading" data-item="Clippy">
+                                                    <span class="agent"></span>
+                                                    <span class="text">Clippy<span class="info"> (loading...)</span></span>
+                                                </a>
+                                                <a class="merlin" data-item="Merlin">
+                                                    <span class="agent"></span>
+                                                    <span class="text">Merlin<span class="info"> (loading...)</span></span>
+                                                </a>
+                                                <a class="rover" data-item="Rover">
+                                                    <span class="agent"></span>
+                                                    <span class="text">Rover<span class="info"> (loading...)</span></span>
+                                                </a>
+                                                <a class="links" data-item="Links">
+                                                    <span class="agent"></span>
+                                                    <span class="text">Links<span class="info"> (loading...)</span></span>
+                                                </a>
+
+                                                <div class="clear"></div>
+                                            </div>
+
+                                            <div class="actions">
+                                                <h2>Actions</h2>
+
+                                                <div class="actions-content">
+                                                    <span class="loading">Loading...</span>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="element element-header twelve columns alpha">
+                                        <h3>Motivation</h3>
+                                    </div>
+
+
+                                    <div class="element element-text text-quote-right">
+                                        <div class="eight columns alpha">
+                                            <p>
+                                                During lunch a few weeks ago we thought it would be cool to have a fully
+                                                functional Clippy that can be embedded in any website. We fiddled around with it
+                                                and we had an unexpected amount of fun laughing at Clippy and his antics.
+                                            </p>
+                                            <p>
+                                                We started thinking about the developers' state of mind when they created Clippy.
+                                                Did they think it would really help people? It seems that Microsoft really
+                                                <em>believed</em> that Assistants were the way of the future.
+                                            </p>
+                                            <p>
+                                                We built Clippy.js over the weekend to share that fun and whimsy with everyone,
+                                                and to remind people to try new and risky things, even when they seem silly.
+                                            </p>
+                                        </div>
+                                        <div class="four columns omega">
+                                            <blockquote>
+                                                We built Clippy.js over the weekend to remind people to try risky and silly things.
+                                            </blockquote>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="element element-header twelve columns alpha">
+                                        <h3>Features</h3>
+                                    </div>
+
+
+                                    <div class="element element-text twelve columns alpha">
+                                        <ul>
+                                            <li>Play agent animations</li>
+                                            <li>"Speak" to the user</li>
+                                            <li>Move the agent around</li>
+                                            <li>Use multiple agents at the same time</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="element element-header twelve columns alpha">
+                                        <h3>Behind the scenes</h3>
+                                    </div>
+
+                                    <div class="element element-text twelve columns alpha">
+                                        <p>Agents are composed of multiple sets of animations.
+                                            However, unlike your Saturday morning cartoon, the animation is not <em>linear</em>.
+                                            For example, while Links the cat is idle, behind the scenes a coin is flipped, and 10%
+                                            of the time Links will turn about in boredom, or scratch behind his ears.<br/>
+
+                                        </p>
+                                    </div>
+
+
+                                    <div class="element element-picture twelve columns alpha">
+                                        <div class="picture-figure">
+                                            <img class="scale-with-grid" alt="Agents are composed of multiple sets of animations." src="https://web.archive.org/web/20120712070735im_/http://clippy.js.s3.amazonaws.com/diagram.png"/>
+                                            <label>Agents are composed of multiple sets of animations.</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="element element-header twelve columns alpha">
+                                        <h3>Usage: Setup</h3>
+                                    </div>
+
+                                    <div class="element element-text twelve columns alpha">
+                                        <p>
+                                            Add this code to you to your page to enable Clippy.js.
+                                        </p>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha">
+<pre class="prettyprint">
+&lt;!-- Add the stylesheet to the head --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;clippy.css&quot; media=&quot;all&quot;&gt;
+
+...
+
+&lt;!-- Add these scripts to  the bottom of the page --&gt;
+&lt;!-- jQuery 1.7+ --&gt;
+&lt;script src=&quot;jquery.1.7.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Clippy.js --&gt;
+&lt;script src=&quot;clippy.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Init script --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    clippy.load('Merlin', function(agent) {
+        // Do anything with the loaded agent
+        agent.show();
+    });
+&lt;/script&gt;
+</pre>
+                                    </div>
+
+                                    <div class="element element-header twelve columns alpha">
+                                        <h3>Usage: Actions</h3>
+                                    </div>
+
+                                    <div class="element element-text twelve columns alpha">
+                                        <p>All the agent actions are queued and executed by order, so you could stack them.</p>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha" contenteditable="false">
+                                        <a class="run-example" data-key="play">Run</a>
+
+                                        <pre class="prettyprint">
+// Play a given animation
+agent.Play('Searching');
+</pre>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha" contenteditable="false">
+                                        <a class="run-example" data-key="animate">Run</a>
+
+                                        <pre class="prettyprint">
+// Play a random animation
+agent.animate();
+</pre>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha">
+<pre class="prettyprint">
+// Get a list of all the animations
+agent.animations();
+// =&gt; ["MoveLeft", "Congratulate", "Hide", "Pleased", "Acknowledge", ...]
+</pre>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha" contenteditable="false">
+                                        <a class="run-example" data-key="speak">Run</a>
+
+                                        <pre class="prettyprint">
+// Show text balloon
+agent.speak('When all else fails, bind some paper together. My name is Clippy.');
+</pre>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha" contenteditable="false">
+                                        <a class="run-example" data-key="moveTo">Run</a>
+                                        <pre class="prettyprint">
+// Move to the given point, use animation if available
+agent.moveTo(100,100);
+</pre>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha" contenteditable="false">
+                                        <a class="run-example" data-key="gestureAt">Run</a>
+                                        <pre class="prettyprint">
+// Gesture at a given point (if gesture animation is available)
+agent.gestureAt(200,200);
+</pre>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha" contenteditable="false">
+                                        <a class="run-example" data-key="stopCurrent">Run</a>
+                                        <pre class="prettyprint">
+// Stop the current action in the queue
+agent.stopCurrent();
+</pre>
+                                    </div>
+
+                                    <div class="element element-code twelve columns alpha" contenteditable="false">
+                                        <a class="run-example" data-key="stop">Run</a>
+                                        <pre class="prettyprint">
+// Stop all actions in the queue and go back to idle mode
+agent.stop();
+</pre>
+                                    </div>
+
+                                    <div class="element element-header twelve columns alpha">
+                                        <h3>Download</h3>
+                                    </div>
+
+                                    <div class="element element-text twelve columns alpha" contenteditable="false">
+                                        <ul>
+                                            <li><a href="https://web.archive.org/web/20120712070735/https://github.com/smore-inc/clippy.js/zipball/master">Download clippy (from github)</a></li>
+                                            <li><a href="https://web.archive.org/web/20120712070735/https://github.com/smore-inc/clippy.js">Get the sources</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-bar  h-count">
+                <div class="status-bar-content">
+                <span class="box">
+                    Page 1
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Sec 1
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    1/1
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                    <span class="box">
+                    At 1"
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Ln 1
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Col 1
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                    <span class="box disabled">
+                    REC
+                </span>
+                    <span class="box disabled">
+                    TRK
+                </span>
+                    <span class="box disabled">
+                    EXT
+                </span>
+                    <span class="box disabled">
+                    OVR
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./javascript/clippyjs.js"></script>
+
+
+
+    <!-- JS
+    ==================================================
+    -->
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.async = true;
+        js.src = "https://web.archive.org/web/20120712070735/http://connect.facebook.net/en_US/all.js#appId=255752184462737&xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript" src="./javascript/widgets.js" async="true"></script>
+
+
+    <script type="text/javascript">
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://web.archive.org/web/20120712070735/https://ssl' : 'https://web.archive.org/web/20120712070735/http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!-- End Document
+    ================================================== -->
+</div>
+</body>
+</html>
