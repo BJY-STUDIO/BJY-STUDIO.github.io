@@ -844,7 +844,7 @@ clippy.Balloon.prototype = {
 
 };
 
-clippy.BASE_PATH = './file/';
+clippy.BASE_PATH = 'https://bjy-studio.github.io/file/agents/';
 
 clippy.load = function (name, successCb, failCb) {
     var path = clippy.BASE_PATH + name;

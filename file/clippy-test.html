@@ -1,0 +1,31 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>ClippyJS - Add Clippy or his friends to any website for instant nostalgia</title>
+    <link rel="stylesheet" type="text/css" href="./css/clippy.css" media="all">
+</head>
+<body>
+
+<!-- 按钮用于触发显示 Clippy -->
+<button onclick="showClippy()">Show Clippy</button>
+
+<script>
+    // 显示 Clippy 的函数
+    function showClippy() {
+        // 加载 Clippy，使用 'Merlin' 作为代理名称
+        clippy.load('Clippy', function(agent) {
+            // 显示 Clippy
+            agent.show();
+        });
+    }
+</script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./javascript/clippy.js"></script>
+
+</div>
+</body>
+</html>
